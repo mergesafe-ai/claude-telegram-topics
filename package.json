@@ -1,0 +1,22 @@
+{
+  "name": "claude-telegram-topics",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One Telegram forum topic per Claude Code session: a single router owns the bot, each session is a channel.",
+  "scripts": {
+    "router": "bun src/router.ts",
+    "channel": "bun src/channel.ts",
+    "setup": "bun src/setup.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "grammy": "^1.21.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.6.0"
+  }
+}
