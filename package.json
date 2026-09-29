@@ -1,7 +1,7 @@
 {
   "name": "claude-telegram-topics",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "One Telegram forum topic per Claude Code session: a single router owns the bot, each session is a channel.",
   "scripts": {
