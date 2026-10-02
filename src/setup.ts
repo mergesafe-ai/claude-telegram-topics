@@ -43,6 +43,10 @@ if (groups.size > 1 && !process.argv[2]) {
 }
 
 const groupId = process.argv[2] ? Number(process.argv[2]) : [...groups.keys()][0]!
+if (!Number.isSafeInteger(groupId) || !groups.has(groupId)) {
+  console.error(`Group ${process.argv[2]} is not one of the forum groups found above.`)
+  process.exit(1)
+}
 cfg.groupId = groupId
 cfg.allowFrom = [...new Set([...cfg.allowFrom, ...users.keys()])]
 saveConfig(cfg)
